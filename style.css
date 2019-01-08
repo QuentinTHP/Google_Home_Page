@@ -1,9 +1,11 @@
 html, body {
     width: 100%;
     height: 100%;
-    margin: 0
+    margin: 0;
+    font-family: arial, sans-serif;
 }
 
+/*Code permettant d'afficher la page entière en utilisant flexbox*/
 article {
     min-height: 100%;
     display: flex;
@@ -11,50 +13,42 @@ article {
     align-items: stretch;
 }
 
-main {
-    flex-grow: 1;
-}
-
 header, main, footer {
     flex-shrink: 0;
 }
 
-a, .footerlong
-{
-   color: #757575;
-   text-decoration: none;
-}
-a:hover
-{
-   text-decoration: underline;
-   color: #757575;
+main {
+    flex-grow: 1;
 }
 
-
-/* Je ne touche plus à mes config ci-dessus*/
-
-.lignebas /* objectif reussi = mettre cote a cote les 2 footer*/ 
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+    font-size: small;
 }
 
-.footer1 /**/
+header
 {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.footer2
-{
-    width: 50%;
+    margin: 20px 30px 0 0;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
-/* Je ne touche plus à mes config ci-dessus*/
+header input {
+    font-size: 13px;
+    font-weight: bold;
+    width: 93px;
+    height: 28px;
+    padding: 0 12px;
+    text-align: center;
+    color: white;
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+    border-radius: 2px;
+    outline: none;
+}
 
 main
 {
@@ -64,20 +58,86 @@ main
     flex-direction: column;
 }
 
-header
+#logo {
+    margin-bottom: 20px;
+}
+
+.searchbar {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.searchbar input {
+    font-size: 18px;
+    min-width: 560px;
+    min-height: 39px;
+    padding: 5px 8px 0 16px;
+    border: 1px solid rgba(0,0,0,0.30);
+    border-radius: 3px;
+    outline: none;
+    box-shadow: 1px 1px 1px lightgrey;
+}
+
+.searchbar input:hover {
+    box-shadow: 3px 3px 5px lightgrey;
+}
+
+.searchbar img {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    height: 22px;
+}
+
+.buttons {
+    margin-bottom: 100px;
+}
+
+.buttons input {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 11px 7px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    cursor: default;
+    height: 36px;
+    line-height: 27px;
+}
+
+.buttons input:hover {
+    color: black;
+    box-shadow: 1px 1px 5px grey;
+}
+
+
+.lignebas a {
+   color: #757575;
+}
+
+a:hover
+{
+   text-decoration: underline;
+   color: #757575;
+}
+
+.lignebas
 {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
     flex-direction: row;
+    justify-content: space-between;
 }
+
 
 .buttonhead
 {
     width: 250px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .buttons
@@ -86,9 +146,25 @@ header
     flex-direction: row;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    color: rgba(0,0,0,.54);
+    background: #f2f2f2;
+    height: 82px;
+}
+
 .footerlong
 {
-    margin-left: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.footerlong, .lignebas{
+    display: flex;
+    height: 41px;
+    border-top: 1px solid #e4e4e4;
 }
 
 .footer1
@@ -96,9 +172,9 @@ header
     width: 300px;
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    margin-left: 30px;
     justify-content: space-between;
-   
+    align-items: center;
 }
 
 .footer2
@@ -106,8 +182,7 @@ header
     width: 500px;
     display: flex;
     flex-direction: row;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    margin-right: 40px;
     justify-content: space-between;
-
+    align-items: center;
 }
